@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SutureMaster PRO | Surgical Suturing Masterclass</title>
-  <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
-  <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
-  <link href="[https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap](https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap)" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     /* ============================================================
        CSS VARIABLES
@@ -49,10 +49,10 @@
       color: var(--ink);
       line-height: 1.6;
       text-align: left;
+      /* Flexbox to make the UI fill screen height */
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      width: 100%;
     }
 
     /* ---------- Top bar ---------- */
@@ -63,11 +63,10 @@
       display: flex;
       align-items: center;
       gap: 24px;
-      padding: 12px 4vw; /* الهوامش مرنة تتمدد مع الشاشة */
+      padding: 12px 4vw; /* Fluid padding */
       background: rgba(10, 31, 51, 0.92);
       backdrop-filter: blur(8px);
       border-bottom: 1px solid rgba(255,255,255,0.08);
-      width: 100%;
     }
     .brand { display: flex; align-items: center; gap: 10px; color: #fff; }
     .brand-mark { font-size: 22px; }
@@ -116,9 +115,8 @@
         linear-gradient(160deg, var(--navy-900), var(--navy-800) 60%, var(--green-800));
       color: #fff;
       text-align: center;
-      padding: 8vh 4vw 6vh;
+      padding: 8vh 4vw 6vh; /* Fluid padding */
       border-bottom: 4px solid var(--mint);
-      width: 100%;
     }
     .hero-badge {
       display: inline-block;
@@ -260,7 +258,7 @@
     .pathway-head { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
     .pathway-head h2 { margin: 0; font-size: 24px; font-weight: 800; color: var(--navy-800); }
     .pathway-sub { color: var(--mut); font-size: 14.5px; margin: 0 0 20px; max-width: 820px; }
-    .acc { border: 1px solid var(--line); border-radius: 16px; background: #fff; box-shadow: 0 6px 18px rgba(10, 45, 60, 0.06); width: 100%; }
+    .acc { border: 1px solid var(--line); border-radius: 16px; background: #fff; box-shadow: 0 6px 18px rgba(10, 45, 60, 0.06); }
     .acc-item { border-bottom: 1px solid var(--line); }
     .acc-item:last-child { border-bottom: 0; }
     .acc-btn {
@@ -297,6 +295,7 @@
     .acc-inner { padding: 4px 22px 26px; }
     .acc-intro { font-size: 14px; color: var(--mut); max-width: 780px; margin: 0 0 18px; }
     
+    /* Auto-fit for accordion grid */
     .acc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
     
     .topic-card { background: #fafdfb; border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
@@ -373,12 +372,12 @@
 
     /* ---------- Main / categories ---------- */
     .main { 
-      flex: 1; /* Pushes footer down */
+      flex: 1; /* Pushes footer to the bottom */
       width: 100%;
       margin: 0 auto; 
       padding: 44px 4vw 20px; 
     }
-    .category { margin-bottom: 52px; width: 100%; }
+    .category { margin-bottom: 52px; }
     .category h2 { display: flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 800; color: var(--navy-800); margin: 0 0 4px; }
     .cat-no {
       background: linear-gradient(135deg, var(--green-600), var(--teal));
@@ -390,7 +389,8 @@
     }
     .cat-sub { color: var(--mut); margin: 0 0 20px 40px; font-size: 14.5px; }
     
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; width: 100%; }
+    /* Auto-fit grid for cards */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
 
     /* ---------- Cards ---------- */
     .card {
@@ -464,7 +464,7 @@
     .modal-backdrop[hidden] { display: none !important; }
     
     .modal {
-      width: min(1200px, 95vw); 
+      width: min(1200px, 95vw); /* Responsive width */
       max-height: 90vh;
       overflow-y: auto;
       background: #fff;
@@ -692,7 +692,6 @@
       margin-top: 44px;
       background: linear-gradient(160deg, var(--navy-900), var(--navy-800) 55%, var(--green-800));
       border-top: 4px solid var(--mint);
-      width: 100%;
     }
     .footer-inner {
       width: 100%;
@@ -768,6 +767,7 @@
       .pathway-head h2 { font-size: 21px; }
       .pathway-sub { font-size: 14px; }
 
+      /* Keep a single column on mobile */
       .grid { grid-template-columns: 1fr; gap: 16px; }
       .acc-grid { grid-template-columns: 1fr; gap: 12px; }
 
@@ -938,7 +938,7 @@
       </div>
       <p class="footer-disclaimer">Educational tool for training purposes only — not a substitute for supervised surgical training, local protocols, or institutional guidelines.</p>
       <div class="footer-contact">
-        <a class="contact-link" href="[https://www.instagram.com/dr.mhn.d?igsh=bnh6bGIwOGNxbTl0](https://www.instagram.com/dr.mhn.d?igsh=bnh6bGIwOGNxbTl0)" target="_blank" rel="noopener noreferrer" aria-label="Instagram: @dr.mhn.d">
+        <a class="contact-link" href="https://www.instagram.com/dr.mhn.d?igsh=bnh6bGIwOGNxbTl0" target="_blank" rel="noopener noreferrer" aria-label="Instagram: @dr.mhn.d">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
             <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
@@ -1529,7 +1529,7 @@
 
           const video = sec.video
             ? (sec.video.id
-                ? '<div class="video-frame-sm"><iframe src="[https://www.youtube-nocookie.com/embed/](https://www.youtube-nocookie.com/embed/)' + sec.video.id + '" title="' + sec.video.label + '" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>' + (sec.video.src ? '<p class="video-meta">🎬 Video · <b>' + sec.video.src + '</b></p>' : "")
+                ? '<div class="video-frame-sm"><iframe src="https://www.youtube-nocookie.com/embed/' + sec.video.id + '" title="' + sec.video.label + '" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>' + (sec.video.src ? '<p class="video-meta">🎬 Video · <b>' + sec.video.src + '</b></p>' : "")
                 : '<div class="video-slot" aria-label="' + sec.video.label + ' — video placeholder"><span class="play">▶</span><div><b>' + sec.video.label + "</b><span>Video placeholder — add a videoId in the data to embed a clip here</span></div></div>")
             : "";
 
@@ -1649,7 +1649,7 @@
             '<div class="stepper">' +
               '<div class="video-wrap" id="videoWrap">' +
                 '<div class="video-frame">' +
-                  '<iframe src="[https://www.youtube-nocookie.com/embed/](https://www.youtube-nocookie.com/embed/)' + d.videoId + '" title="' + d.name + ' — technique demonstration" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>' +
+                  '<iframe src="https://www.youtube-nocookie.com/embed/' + d.videoId + '" title="' + d.name + ' — technique demonstration" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>' +
                 "</div>" +
                 '<p class="video-meta">🎬 Video demonstration · <b>' + d.videoSource + '</b> — watch the exact hand movements before practicing.</p>' +
               "</div>" +
